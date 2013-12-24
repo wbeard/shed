@@ -12,11 +12,6 @@ app = Flask(__name__)
 
 # Handles invaid request events
 # Will raise an error and return back a body & status code
-# Dependencies
-#	InvalidUsage (ln 5)
-#	jsonify (ln 3)
-# Returns
-#	response object
 @app.errorhandler(InvalidUsage)
 def handle_invalid_usage(error):
 	return Route_Handlers.handle_invalid_usage(error)
